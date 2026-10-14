@@ -21,7 +21,7 @@ This project focuses on:
 
 ## Architecture
 
-![Secure IPAM MCP Server reference architecture](docs/images/architecture.png)
+![Secure IPAM MCP Server reference architecture](https://raw.githubusercontent.com/sakhan-rio/enterprise-ipam-mcp/main/docs/images/architecture.png)
 
 The architecture separates four concerns:
 
