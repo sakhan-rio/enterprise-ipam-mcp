@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "secure-ipam-mcp"
+version = "0.1.0"
+description = "A security-focused MCP server reference implementation for EfficientIP SOLIDserver."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+
+authors = [
+    { name = "Saima Khan" }
+]
+
+keywords = [
+    "mcp",
+    "model-context-protocol",
+    "fastmcp",
+    "ipam",
+    "solidserver",
+    "efficientip",
+    "entra-id",
+    "opentelemetry",
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Networking",
+]
+
+dependencies = [
+    "fastmcp>=2.12.0",
+    "fastapi[standard]>=0.115.0",
+    "uvicorn>=0.30.0",
+    "requests>=2.32.0",
+    "python-dotenv>=1.0.0",
+
+    # Azure Application Insights / OpenTelemetry
+    "azure-monitor-opentelemetry>=1.6.0",
+
+    # OpenTelemetry / OTLP export
+    "opentelemetry-api>=1.27.0",
+    "opentelemetry-sdk>=1.27.0",
+    "opentelemetry-exporter-otlp-proto-http>=1.27.0",
+]
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.14",
+    "pytest-asyncio>=0.24",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/sakhan-rio/secure-ipam-mcp"
+Repository = "https://github.com/sakhan-rio/secure-ipam-mcp"
+Issues = "https://github.com/sakhan-rio/secure-ipam-mcp/issues"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
