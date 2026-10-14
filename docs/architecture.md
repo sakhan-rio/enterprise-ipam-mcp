@@ -12,7 +12,7 @@ separate:
 4.  downstream SOLIDserver authentication
 5.  audit and observability
 
-![Reference architecture](images/architecture.svg)
+![Reference architecture](images/architecture.png)
 
 The primary hosted request flow is:
 

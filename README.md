@@ -21,7 +21,7 @@ This project focuses on:
 
 ## Architecture
 
-![Secure IPAM MCP Server reference architecture](docs/images/architecture.svg)
+![Secure IPAM MCP Server reference architecture](docs/images/architecture.png)
 
 The architecture separates four concerns:
 
